@@ -151,7 +151,7 @@ supported. Only the first HTTP port is available via this frontend.
             ConfigTemplate(name='HTTPS_FRONTEND_HEAD',
                            value='''
 frontend marathon_https_in
-  bind *:443 ssl {sslCerts}
+  bind *:443 accept-proxy ssl {sslCerts}
   mode http
 ''',
                            overridable=False,
